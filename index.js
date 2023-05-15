@@ -5,7 +5,7 @@ const port = 3000;
 
 app.get('/', (_req, res) => {
   res.sendFile(__dirname + '/index.html');
-  return res.status(200);
+  return res.status(300);
 });
 
 app.listen(port, () => {

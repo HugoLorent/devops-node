@@ -52,8 +52,6 @@ jobs:
     needs: sonarcloud
     steps:
       - name: Publish package on NPM 📦
-        with:
-          registry-url: "https://registry.npmjs.org"
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

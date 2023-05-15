@@ -53,7 +53,7 @@ jobs:
   deploy-dev:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/dev'
-    needs: sonarcloud
+    needs: sonar
     environment:
       name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -76,7 +76,7 @@ jobs:
   deploy-master:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    needs: sonarcloud
+    needs: sonar
     environment:
       name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
